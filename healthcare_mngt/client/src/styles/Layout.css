@@ -1,0 +1,175 @@
+.main {
+    padding: 10px;
+    height: 100vh;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.layout {
+    display: flex;
+    height: 100%; /* Ensure layout takes full height */
+}
+
+.sidebar {
+    min-height: 100%;
+    width: 350px; /* Adjusted width for the sidebar */
+    border-radius: 5px;
+    background-color: #003366; /* Dark Blue for the sidebar */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    margin-right: 20px;
+    color: white;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+
+.sidebar:hover {
+    background-color: #004080; /* Darker shade on hover */
+}
+
+.menu {
+    margin-top: 30px;
+    width: 200px;
+}
+
+.menu-item {
+    padding: 10px;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}
+
+.menu-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.15rem;
+}
+
+.menu-item i {
+    font-size: 1.2rem;
+    margin: 0 15px;
+}
+
+.active {
+    background-color: #00509E; /* Active item color (blue) */
+}
+
+.active a, .active i {
+    color: white; /* Active item text color */
+}
+
+.content {
+    flex-grow: 1; /* Allow content area to expand */
+    height: 100%;
+    overflow-y: auto; /* Enable scrolling */
+}
+
+.header {
+    height: 80px; /* Adjusted height for better visibility */
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    background-color: white;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 15px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Align items properly */
+    align-items: center;
+    width: 100%; 
+}
+
+.header-content h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5em; /* Adjust font size */
+    color: red; /* Change color to red for welcome message */
+    flex-grow: 1; /* Allow the welcome message to take available space */
+}
+
+.header-content > div {
+    margin-left: 15px; 
+}
+
+.header-content i {
+    margin-right: 2.5px;
+    font-size: 1.2rem;
+}
+
+.header-content a {
+    text-decoration: none;
+    color: blue;
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.logo h5 {
+    text-align: center;
+    margin-top: 15px;
+}
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    justify-content: space-around; /* Space links evenly */
+    padding: 10px 0;
+    background-color: #e7f1ff; /* Light blue for navigation background */
+    border-bottom: 1px solid #ccc; /* Optional */
+}
+
+.nav-menu a,
+.nav-menu span {
+    cursor: pointer; /* Change cursor to pointer */
+    transition: color 0.3s; /* Optional: smooth color transition on hover */
+    padding: 10px 15px; /* Optional: add some padding for clickable area */
+    display: inline-block; /* Make the spans behave like block elements for better padding */
+}
+
+/* Corrected hover effect */
+.nav-menu a:hover,
+.nav-menu span:hover {
+    background-color: #cfe7ff; /* Light blue on hover */
+    color: #007bff; /* Optional: change text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 670px) {
+    .layout {
+        flex-direction: column; 
+    }
+
+    .sidebar {
+        width: 100%; 
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+
+    .header {
+        height: auto; 
+    }
+
+    .body {
+        height: auto; 
+    }
+}
+/* src/styles/Layout.css */
+
+.welcome-slider {
+    font-size: 2rem; /* Adjust size as needed */
+    color: red; /* Color of the welcome message */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .slider-letter {
+    display: inline-block; /* Ensure letters are inline */
+    transition: opacity 0.1s; /* Smooth fade-in effect */
+    opacity: 0; /* Start hidden */
+  }
+  
+  .slider-letter.visible {
+    opacity: 1; /* Fade in effect */
+  }
+  

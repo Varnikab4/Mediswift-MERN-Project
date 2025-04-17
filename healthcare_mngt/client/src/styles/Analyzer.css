@@ -1,0 +1,434 @@
+.analyzer-container {
+    background-color: #f8f9fa;
+    min-height: 85vh;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .analyzer-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  
+  .analyzer-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #1a76d2, #64b5f6);
+    border-radius: 2px;
+  }
+  
+  .analyzer-header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .analyzer-header p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+  }
+  
+  .analyzer-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .analyzer-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    color: #7f8c8d;
+    font-style: italic;
+    border-top: 1px solid #eee;
+  }
+  
+  /* FileUpload Component Styling */
+  .upload-container {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .upload-area {
+    border: 2px dashed #1a76d2;
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: #f5f9ff;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .upload-area:hover, .drag-active {
+    background-color: #e3f2fd;
+    border-color: #64b5f6;
+    transform: translateY(-3px);
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .upload-icon {
+    color: #1a76d2;
+    margin-bottom: 15px;
+  }
+  
+  .upload-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .file-label {
+    cursor: pointer;
+    display: block;
+  }
+  
+  .file-label p {
+    margin: 10px 0;
+    color: #34495e;
+    font-size: 1.1rem;
+  }
+  
+  .file-types {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+  
+  .selected-file {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .analyze-button, .reset-button, .copy-button {
+    background-color: #1a76d2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .analyze-button:hover, .reset-button:hover, .copy-button:hover {
+    background-color: #0d47a1;
+    transform: translateY(-2px);
+  }
+  
+  .reset-button {
+    background-color: #e74c3c;
+  }
+  
+  .reset-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .copy-button {
+    background-color: #2ecc71;
+  }
+  
+  .copy-button:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Loading Spinner Styling */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    width: 100%;
+  }
+  
+  .loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #1a76d2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-container p {
+    color: #34495e;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .loading-note {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Error Container Styling */
+  .error-container {
+    text-align: center;
+    background-color: #fdeeee;
+    border-left: 5px solid #e74c3c;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  
+  .error-container h2 {
+    color: #e74c3c;
+    margin-bottom: 10px;
+  }
+  
+  .error-container button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .error-container button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Analysis Results Styling */
+  .analysis-container {
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  .analysis-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .analysis-header h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  .analysis-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .analysis-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .analysis-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .analysis-section h2 {
+    color: #34495e;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  .patient-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .patient-info-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+  }
+  
+  .patient-info-label {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
+  .patient-info-value {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  .key-parameters-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .key-parameters-table th,
+  .key-parameters-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .key-parameters-table th {
+    background-color: #f8f9fa;
+    color: #34495e;
+    font-weight: 600;
+  }
+  
+  .key-parameters-table tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .parameter-name {
+    color: #34495e;
+    font-weight: 500;
+  }
+  
+  .parameter-value {
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .abnormal-findings ul,
+  .recommendations ul {
+    padding-left: 20px;
+  }
+  
+  .abnormal-findings li,
+  .recommendations li {
+    margin-bottom: 10px;
+    color: #34495e;
+    line-height: 1.5;
+  }
+  
+  .abnormal-findings li {
+    color: #e74c3c;
+  }
+  
+  .analysis-note {
+    text-align: center;
+    font-style: italic;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    color: #7f8c8d;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .analyzer-container {
+      padding: 15px;
+    }
+    
+    .analyzer-header h1 {
+      font-size: 2rem;
+    }
+    
+    .analysis-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .patient-info {
+      grid-template-columns: 1fr;
+    }
+    
+    .analyzer-content {
+      padding: 15px;
+    }
+  }
+
+  /* Add this to your App.css or appropriate stylesheet */
+
+.download-docx-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .download-docx-button:hover {
+    background-color: #45a049;
+  }
+  
+  .download-docx-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Add to your existing styles for proper button layout */
+  .analysis-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .analysis-actions {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .copy-button,
+    .download-docx-button,
+    .reset-button {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+  }

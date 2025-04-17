@@ -1,0 +1,294 @@
+/* BookingPage.css - Enhanced styling for the doctor appointment booking page */
+
+/* Container styling with responsive considerations */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Page title styling */
+h3 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+/* Doctor information section */
+.doctor-info {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.doctor-info:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Doctor name styling */
+h4 {
+  color: #34495e;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Highlight the fees and timings information */
+.doctor-fee, .doctor-timings {
+  background-color: #eaf2f8;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: 500;
+  color: #2980b9;
+  border-left: 4px solid #3498db;
+}
+
+/* Bio button container */
+.doctor-bio-btn-container {
+  margin-bottom: 15px;
+}
+
+/* Bio button styling - small and elegant */
+.bio-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+  display: inline-flex;
+  align-items: center;
+}
+
+.bio-btn:hover {
+  background-color: #2980b9;
+  box-shadow: 0 4px 8px rgba(41, 128, 185, 0.4);
+  transform: translateY(-2px);
+}
+
+.bio-btn i {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+/* Bio card styling with smooth animation */
+.bio-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin: 15px 0 25px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  max-height: 0;
+  opacity: 0;
+}
+
+.bio-card.active {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 20px;
+}
+
+.bio-card-header {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.bio-card-content {
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.bio-card-section {
+  margin-bottom: 15px;
+}
+
+.bio-card-section h6 {
+  color: #3498db;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.bio-card-section ul {
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.bio-card-section ul li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+
+.bio-card-section ul li:before {
+  content: "•";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+}
+
+/* Form elements container */
+.booking-form {
+  background-color: #f5f5f5;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  width: 50%;
+}
+
+/* DatePicker and TimePicker styling */
+.ant-picker {
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s ease;
+}
+
+.ant-picker:hover {
+  border-color: #40a9ff;
+}
+
+.ant-picker-focused {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* Form field wrappers */
+.picker-wrapper {
+  margin: 15px 0;
+}
+
+.picker-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* Button styling */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 12px 18px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  border-color: #3498db;
+  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+  box-shadow: 0 6px 10px rgba(41, 128, 185, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-dark {
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+  box-shadow: 0 4px 6px rgba(44, 62, 80, 0.2);
+}
+
+.btn-dark:hover {
+  background-color: #1a252f;
+  border-color: #1a252f;
+  box-shadow: 0 6px 10px rgba(26, 37, 47, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .booking-form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-form {
+    width: 100%;
+  }
+  
+  .doctor-fee, .doctor-timings {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Animation for success message */
+.ant-message-notice-content {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Improve the date and time picker containers specifically */
+.m-2 {
+  margin: 0.75rem !important;
+}
+
+.mt-3 {
+  margin-top: 1.25rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.75rem !important;
+}
+
+/* Additional styling for buttons row */
+.buttons-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+/* Add doctor availability indicator */
+.availability-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.available {
+  background-color: #2ecc71;
+}
+
+.busy {
+  background-color: #e74c3c;
+}

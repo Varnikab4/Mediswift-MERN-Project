@@ -1,0 +1,172 @@
+/* Common styles for doctor forms */
+.doctor-form-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .form-header h1 {
+    font-size: 2.2rem;
+    color: #1a3d7c;
+    margin-bottom: 10px;
+  }
+  
+  .form-header p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  .form-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+    color: #1a3d7c;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-weight: 600;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 60px;
+    background: #1890ff;
+  }
+  
+  /* Form elements styling */
+  .ant-form-item-label > label {
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .ant-input,
+  .ant-picker {
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    border: 1px solid #d9d9d9;
+  }
+  
+  .ant-input:hover,
+  .ant-picker:hover {
+    border-color: #40a9ff;
+  }
+  
+  .ant-input:focus,
+  .ant-picker-focused {
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  }
+  
+  .ant-input-textarea {
+    border-radius: 8px;
+  }
+  
+  .ant-btn-primary {
+    height: 48px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #1a3d7c;
+    border-color: #1a3d7c;
+    transition: all 0.3s;
+  }
+  
+  .ant-btn-primary:hover {
+    background: #2c5ebd;
+    border-color: #2c5ebd;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(26, 61, 124, 0.2);
+  }
+  
+  /* Upload button styling */
+  .ant-upload-list {
+    margin-top: 10px;
+  }
+  
+  .upload-container {
+    border: 2px dashed #d9d9d9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  .upload-container:hover {
+    border-color: #1890ff;
+  }
+  
+  .upload-icon {
+    font-size: 2rem;
+    color: #1890ff;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive grid adjustments */
+  @media (max-width: 768px) {
+    .form-card {
+      padding: 20px 15px;
+    }
+    
+    .ant-btn-primary {
+      height: 44px;
+    }
+    
+    .section-title {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Card styling for profile view */
+  .profile-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .profile-card .ant-card-head {
+    background: #1a3d7c;
+    color: white;
+    padding: 16px 24px;
+    font-weight: 600;
+  }
+  
+  .profile-card .ant-card-head-title {
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  /* Form field icons */
+  .field-icon {
+    margin-right: 8px;
+    color: #1890ff;
+  }
+  
+  /* Animation for loading states */
+  @keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+  
+  .loading-container {
+    animation: pulse 1.5s infinite ease-in-out;
+    text-align: center;
+    padding: 40px;
+  }

@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.news-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* Title */
+.news-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #0052cc;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* News Card */
+.news-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 82, 204, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.news-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: #e0e0e0;
+}
+
+/* Content */
+.news-content {
+  padding: 15px;
+}
+
+.news-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #6a0dad;
+  margin-bottom: 8px;
+}
+
+.news-summary {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Read More Button */
+.read-more {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #007bff;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.read-more:hover {
+  background: #0052cc;
+}
+
+/* Loading & Error Text */
+.loading-text,
+.error-text {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #d9534f;
+}
+
+/* No News Text */
+.no-news-text {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #6a0dad;
+}
+
+/* Reload Button */
+.reload-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.reload-btn {
+  background: #0052cc;
+  color: white;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.reload-btn:hover {
+  background: #007bff;
+}

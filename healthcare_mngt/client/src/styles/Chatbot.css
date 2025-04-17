@@ -1,0 +1,209 @@
+/* General Chatbot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 400px;
+    height: 600px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    color: red;
+  }
+  
+  /* Chatbot Header */
+  .chatbot-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .hospital-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+  }
+  
+  /* Chat Wrapper */
+  .chat-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #e6f7ff;
+    padding: 10px;
+    overflow: hidden; /* Ensure content fits properly */
+  }
+  
+  /* Warning Box */
+  .warning-box {
+    background: #ffcc00;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* Chat Container */
+  .chat-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  /* Chat Messages */
+  .chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 400px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Scrollbar Styling */
+  .chat-messages::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .chat-messages::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+  }
+  
+  /* Input Container Styling */
+
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    gap: 5px; /* Reduced gap for better spacing */
+}
+  
+  /* User Icon */
+  .user-icon {
+    font-size: 20px;
+    color: #007bff;
+    flex-shrink: 0; 
+}
+  /* Chat Input (Text Area) - Increased Size */
+  .chat-input {
+    flex: 1; /* Takes up available space */
+    border: none;
+    outline: none;
+    padding: 8px 10px; /* Reduced padding for better fit */
+    font-size: 14px;
+    min-height: 30px; /* Ensured uniform height */
+    max-height: 30px;
+    width: auto;
+    overflow-y: auto;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+  
+  .chat-input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Send Button - Made Smaller */
+  .send-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 10px; /* Reduced padding */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px; /* Matched input height */
+}
+  .send-button:hover {
+    background: #0056b3;
+  }
+  
+  /* Clear Chat Button */
+  .clear-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .clear-button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  .clear-button:hover {
+    background: darkred;
+  }
+  
+  /* Open Chatbot Button - Small Icon in Bottom Right */
+  .open-chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .open-chatbot-btn:hover {
+    background: #0056b3;
+  }

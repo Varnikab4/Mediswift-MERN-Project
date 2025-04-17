@@ -1,0 +1,221 @@
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.register-container {
+  display: flex;
+  width: 1000px;
+  max-width: 95%;
+  min-height: 600px;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.register-container:hover {
+  transform: scale(1.02);
+}
+
+.register-image-container {
+  flex: 1;
+  background: linear-gradient(135deg, #2150a1 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.register-welcome {
+  position: relative;
+  text-align: center;
+}
+
+.register-welcome h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.register-welcome .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-welcome .logo-icon {
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+
+.register-form-container {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.register-form h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.register-form .form-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  padding-left: 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
+}
+
+.input-group .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #333;
+}
+
+.input-error input {
+  border-color: #f44336;
+}
+
+.error-message {
+  font-size: 0.9rem;
+  color: #f44336;
+  margin-top: 5px;
+}
+
+.register-button {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(44, 50, 162);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #4e6eac;
+}
+
+.register-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.register-button .button-icon {
+  margin-left: 10px;
+}
+
+.login-link-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.login-link {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.creative-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+  }
+
+  .register-image-container {
+    flex: 0 1 100%;
+    height: 300px;
+  }
+
+  .register-form-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-form h2 {
+    font-size: 1.8rem;
+  }
+
+  .register-form .form-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .register-button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile number validation */
+input[type="text"]:valid {
+  border-color: #4CAF50;
+}
+
+input[type="text"]:invalid {
+  border-color: #F44336;
+}
+
+/* Adding a smooth animation effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.register-form {
+  animation: fadeIn 1s ease-in-out;
+}
